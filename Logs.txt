@@ -1,0 +1,134 @@
+10-Feb-25 13:11:26 - bot - INFO - ==============================
+10-Feb-25 13:11:26 - bot - INFO - Python version: 3.12.3
+10-Feb-25 13:11:26 - bot - INFO - Branch: Unknown!
+10-Feb-25 13:11:26 - bot - INFO - Bot version: v2.4.1-beta.0
+10-Feb-25 13:11:26 - bot - INFO - ==============================
+10-Feb-25 13:11:42 - bot - INFO - Couldn't not successfully create telegraph api token!.
+10-Feb-25 13:11:42 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+10-Feb-25 13:11:42 - bot - INFO - Starting...
+10-Feb-25 13:11:42 - telethon.network.mtprotosender - INFO - Connecting to 91.108.56.141:443/TcpFull...
+10-Feb-25 13:11:42 - telethon.network.mtprotosender - INFO - Connection to 91.108.56.141:443/TcpFull complete!
+10-Feb-25 13:12:11 - pyrogram.connection.connection - INFO - Connecting...
+10-Feb-25 13:12:11 - pyrogram.connection.connection - INFO - Connected! Production DC5 - IPv4
+10-Feb-25 13:12:11 - pyrogram.session.session - INFO - NetworkTask started
+10-Feb-25 13:12:11 - pyrogram.session.session - INFO - Session initialized: Layer 158
+10-Feb-25 13:12:11 - pyrogram.session.session - INFO - Device: CPython 3.12.3 - Pyrogram 2.0.106
+10-Feb-25 13:12:11 - pyrogram.session.session - INFO - System: Linux 5.10.102.1-microsoft-standard-WSL2 (en)
+10-Feb-25 13:12:11 - pyrogram.session.session - INFO - Session started
+10-Feb-25 13:12:11 - pyrogram.session.session - INFO - PingTask started
+10-Feb-25 13:12:12 - pyrogram.dispatcher - INFO - Started 2 HandlerTasks
+10-Feb-25 13:12:12 - bot - INFO - @FiLeEnc_Bot is ready!
+10-Feb-25 13:12:12 - bot - INFO - ENC BOT has started.
+10-Feb-25 13:12:12 - apscheduler.scheduler - INFO - Added job "RSS" to job store "default"
+10-Feb-25 13:12:12 - apscheduler.scheduler - INFO - Scheduler started
+10-Feb-25 13:12:13 - bot - CRITICAL - Traceback (most recent call last):
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/urllib3/connection.py", line 445, in request
+    self.endheaders()
+  File "/usr/lib/python3.12/http/client.py", line 1331, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1091, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.12/http/client.py", line 1035, in send
+    self.connect()
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/urllib3/connection.py", line 276, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/urllib3/connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f197d2a2930>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=6800): Max retries exceeded with url: /jsonrpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197d2a2930>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/d/EncVideoBot1/bot/startup/after.py", line 18, in start_aria2p
+    aria2.add(
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/aria2p/api.py", line 100, in add
+    new_downloads.append(self.add_uris([uri], options=options, position=position))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/aria2p/api.py", line 217, in add_uris
+    gid = self.client.add_uri(uris, client_options, position)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/aria2p/client.py", line 475, in add_uri
+    return self.call(self.ADD_URI, params=[uris, options, position])  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/aria2p/client.py", line 258, in call
+    return self.res_or_raise(self.post(payload))
+                             ^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/aria2p/client.py", line 351, in post
+    return requests.post(self.server, data=payload, timeout=self.timeout).json()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/d/EncVideoBot1/venv/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=6800): Max retries exceeded with url: /jsonrpc (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197d2a2930>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+10-Feb-25 13:12:22 - bot - INFO - RSS scheduler has been paused since a download service is not responding…
+10-Feb-25 13:13:12 - bot - INFO - RSS scheduler has been paused since a download service is not responding…
+10-Feb-25 13:13:12 - apscheduler.scheduler - INFO - Paused scheduler job processing
+10-Feb-25 13:14:58 - pyrogram.session.auth - INFO - Start creating a new auth key on DC4
+10-Feb-25 13:14:58 - pyrogram.connection.connection - INFO - Connecting...
+10-Feb-25 13:15:00 - pyrogram.connection.connection - INFO - Connected! Production DC4 - IPv4
+10-Feb-25 13:15:02 - pyrogram.session.auth - INFO - Done auth key exchange: DhGenOk
+10-Feb-25 13:15:02 - pyrogram.connection.connection - INFO - Disconnected
+10-Feb-25 13:15:02 - pyrogram.connection.connection - INFO - Connecting...
+10-Feb-25 13:15:02 - pyrogram.connection.connection - INFO - Connected! Production DC4 (media) - IPv4
+10-Feb-25 13:15:02 - pyrogram.session.session - INFO - NetworkTask started
+10-Feb-25 13:15:03 - pyrogram.session.session - INFO - Session initialized: Layer 158
+10-Feb-25 13:15:03 - pyrogram.session.session - INFO - Device: CPython 3.12.3 - Pyrogram 2.0.106
+10-Feb-25 13:15:03 - pyrogram.session.session - INFO - System: Linux 5.10.102.1-microsoft-standard-WSL2 (en)
+10-Feb-25 13:15:03 - pyrogram.session.session - INFO - Session started
+10-Feb-25 13:15:03 - pyrogram.session.session - INFO - PingTask started
+10-Feb-25 13:18:18 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=1, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197c847ec0>: Failed to establish a new connection: [Errno 111] Connection refused')': /
+10-Feb-25 13:18:18 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=1, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f197c878650>: Failed to establish a new connection: [Errno 111] Connection refused')': /
+10-Feb-25 13:18:18 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=1, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197c847ce0>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/v2/torrents/info
+10-Feb-25 13:18:18 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=1, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197c878350>: Failed to establish a new connection: [Errno 111] Connection refused')': /
+10-Feb-25 13:18:18 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=1, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f197c878d10>: Failed to establish a new connection: [Errno 111] Connection refused')': /
+10-Feb-25 13:18:18 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=1, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f197c879580>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/v2/torrents/info
+10-Feb-25 13:18:35 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=1, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f19753b29f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /
+10-Feb-25 13:18:35 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=1, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f19753b2270>: Failed to establish a new connection: [Errno 111] Connection refused')': /
+10-Feb-25 13:18:35 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=1, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f19753b1a00>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/v2/torrents/info
+10-Feb-25 13:18:35 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=1, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f19753b0f50>: Failed to establish a new connection: [Errno 111] Connection refused')': /
+10-Feb-25 13:18:35 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=1, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f19753b0f50>: Failed to establish a new connection: [Errno 111] Connection refused')': /
+10-Feb-25 13:18:35 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=0, read=1, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f19753b1940>: Failed to establish a new connection: [Errno 111] Connection refused')': /api/v2/torrents/info

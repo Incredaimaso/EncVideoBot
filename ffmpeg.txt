@@ -1,0 +1,1 @@
+ffmpeg -hwaccel cuda -i input.mp4 -vf "scale=-1:480" -c:v hevc_nvenc -preset slow -b:v 700k -c:a copy -c:s copy output.mkv
